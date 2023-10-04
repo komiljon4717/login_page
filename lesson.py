@@ -83,6 +83,7 @@ class Dastur:
             self.__email = input("email kiritdingiz qaytadan kiriting: ").strip()
 
         print("Login successful")
+        self.login_window()
     # ----
     def check_email(self, email):
         self.clear()
@@ -107,6 +108,16 @@ class Dastur:
                 if user.split("#")[2] == email and user.split("#")[3] == password:
                     return True
             return False
+        
+
+    def login_window(self):
+        self.clear()
+        print("""Tizimga xush kelibsiz. Quydagilarni bajarish mumkin!
+              Change login [1]
+              Change password [2]
+              Log out [3]""")
+
+
 
 
 
